@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="box-all">
+      <div class="container">
+        <form action="" id="category-form">
+          <input type="hidden" value="" id="category-id" />
+          <div class="wrapper_student">
+            <h2>Thông tin danh mục</h2>
+            <div class="form_group">
+              <!-- thông tin họ tên -->
+              <label for="category-name">Tên danh mục</label>
+              <input
+                type="text"
+                value=""
+                id="category-name"
+                placeholder="Nhập danh mục"
+              />
+            </div>
+            <!-- Phần radio -->
+            <div class="form_group_radio">
+              <label for="">Trạng thái</label>
+              <div class="content-radio">
+                <div class="item">
+                  <input
+                    type="radio"
+                    value="false"
+                    id="male"
+                    name="category-status"
+                    class="gender-radio"
+                    checked
+                  />
+                  <label for="male"> Ẩn</label>
+                </div>
+                <div class="item">
+                  <input
+                    type="radio"
+                    value="true"
+                    id="female"
+                    name="category-status"
+                    class="gender-radio"
+                  />
+                  <label for="female"> Hiện</label>
+                </div>
+              </div>
+            </div>
+            <!-- Phần submit button -->
+            <div class="button">
+              <button
+                id="btn-category"
+                class="btn btn_primary save-student"
+                type="button"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="table_list" style="width: 40% !important">
+        <div class="table_list-container">
+          <div class="header">
+            <h2>Danh sách danh mục</h2>
+            <div class="search-and-sort">
+              <div class="form-search">
+                <input
+                  value=""
+                  id="searchInput"
+                  type="text"
+                  placeholder="Nhập tên cần tìm kiếm"
+                  class="search-value"
+                />
+                <button class="search" onclick="searchData()">Search</button>
+              </div>
+              <div class="sort">
+                <button class="sort-eng" onclick="sortAlphabetically()">
+                  Anpha b
+                </button>
+              </div>
+            </div>
+          </div>
+          <p class="none-student noneList">Danh sách trống</p>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Tên danh mục</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHẦN PRODUCT -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
